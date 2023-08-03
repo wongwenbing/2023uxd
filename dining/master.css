@@ -1,0 +1,12 @@
+.animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
+    visibility: hidden;
+}
+
+.animate {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
