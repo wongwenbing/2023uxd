@@ -205,7 +205,7 @@ body{
 }
 .contact-in:nth-child(1){
 	flex: 30%;
-	background: url(contactimg.jpg);
+	background: url(../home_images/contactimg.jpg);
 	color: #fff;
 }
 .contact-in:nth-child(2){
