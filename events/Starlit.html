@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="Starlit.css">
+    <link rel="stylesheet" class="w3-image w3-xlarge" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+
+
+        function next() {
+            const name = document.getElementById('name').textContent; 
+            localStorage.setItem("name", name);
+
+
+
+            const price = document.getElementById('price').textContent; 
+            localStorage.setItem("price", price);
+
+
+            const drink = document.getElementById('drink').textContent; 
+            localStorage.setItem("drink", drink);
+
+            const up = document.getElementById('up').textContent; 
+            localStorage.setItem("up", up);
+
+
+            window.location.href = 'BallRoom_Booking.html'; 
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <link href="../general/navbar.css" rel="css stylesheet">
+          <div class="header">
+              <a href="../index.html"><img src="../general_images/logoheader.png"></a>
+          </div>
+          <a href="../index.html">HOME</a>
+          <a href="../stay/stay.html">STAY</a>
+          <a href="../dining/dining.html">DINING</a>
+          <a href="../events/events.html">EVENTS</a>
+          <a href="../home/find_us.html">FIND US</a>
+          <div class="dropdown">
+            <a href="#" id="dropbtn">BOOK NOW   <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content" style="top: 100%;"> 
+                <a href="../stay/book_rooms.html">BOOK ROOMS</a>
+                <a href="../dining/book_restaurant.html">BOOK RESTAURANT</a>
+            </div>
+            </div>
+          </div>
+          </div>
+        <div id="menuBtn">
+            <img src="../general_images/openmenu.png" id="menu">
+        </div>
+
+
+    <div class="container">
+        <br><br>
+        <img src="../general_images/hotellogo.png">
+        <div class="Inside">
+            <div class="w3-row">
+                <div class="w3-col w3-container" style="width:32%"></div>
+                <div class="w3-col w3-container" style="width:37%"><p class="ball">Starlit Serenade Ballroom</p></div>
+                <div class="w3-col w3-container" style="width:25%"></div>
+            </div>
+
+
+            <div class="w3-row">
+                <div class="w3-col w3-container" style="width:23%"></div>
+                <div class="w3-col w3-container" style="width:60%"><a class="ball2">Experience the Enchantment of Our Ballroom</a></div>
+                <div class="w3-col w3-container" style="width:25%"></div>
+            </div>
+
+<br>
+
+            
+        </div>
+        <br><br><br><br><br><br>
+        
+    </div>
+<br><br>
+
+
+
+<div class="w3-row">
+    <div class="w3-col w3-container" style="width:25%"><hr class="line"></div>
+
+    <div class="w3-col w3-container" style="width:30%"><p class="ball">Starlit Serenade Ballroom</p></div>
+
+    <div class="w3-col w3-container" style="width:25%"></div>
+
+
+</div>
+    <div class="w3-row">
+
+        <div class="w3-col w3-container" style="width:12%"></div>
+        
+        <div class="w3-col w3-container" style="width:35%"><p class="ball" id="name">Starlit Serenade Ballroom</p><br><p class="word">
+            Introducing the Starlit Serenade Ballroom, a celestial venue of elegance and charm. Nestled within Goodwood Park, this pillarless gem enchants with its vast space and exquisite decor. A true constellation of beauty awaits you.</p><br><br><button class="hyper" onclick="next()">Book Now!</button></div>
+    
+        <div class="w3-col w3-container" style="width:45%"><img src="../events_images/Starlit_BallRoom.jpg" class="details w3-image"></div>
+    
+        </div>
+        <div class="w3-row">
+            <div class="w3-col w3-container" style="width:25%"><hr class="line"></div>
+        
+            <div class="w3-col w3-container" style="width:30%"><p class="ball">Detailed Pricing</p></div>
+        
+            <div class="w3-col w3-container" style="width:25%"></div>
+        
+        
+        </div>
+        <div class="w3-row">
+            <div class="w3-col w3-container" style="width:10%"></div>
+            <div class="w3-col w3-container" style="width:60%">
+                <p class="ball">Detailed Pricing</p>
+                <br>
+                <ul class="pricing-list">
+                    <li><strong>Rental Fee:</strong> Starting from <label id="price">$350</label> Per Hour</li>
+                    <li><strong>Amenities:</strong> Included in rental fee (Audiovisual equipment, lighting, table settings, chairs, linens)</li>
+                    <li><strong>Catering:</strong> Customizable menus available. Pricing depends on menu and number of guests.</li>
+                    <li><strong>Beverage Packages:</strong> From  <label id="drink">$80</label> per person (Alcoholic and non-alcoholic beverages)</li>
+                    <li><strong>Additional Services:</strong> Customized services available. Contact us for pricing.</li>
+                </ul>
+            </div>
+            <div class="w3-col w3-container" style="width:23%"></div>
+        </div>
+ 
+
+    </div>
+
+    <div class="w3-row">
+        <div class="w3-col w3-container" style="width:25%"><hr class="line"></div>
+        <div class="w3-col w3-container" style="width:30%"><p class="ball">THE SPACE</p></div>
+        <div class="w3-col w3-container" style="width:25%"></div>
+    </div>
+
+    <div class="w3-row" id="second">
+
+        <div class="w3-col w3-container" style="width:12%"></div>
+            
+        <div class="w3-col w3-container" style="width:45%"><img src="../events_images/Starlit_Floor.png" class="details w3-image"></div>
+        
+        <div class="w3-col w3-container" style="width:35%"><p class="ball">Our Floor Plan</p><br><p class="word">
+            Step into the Starlit Serenade Ballroom's spacious, adaptable floor plan, tailored for elegant events. Our expert team collaborates closely to curate the perfect layout, ensuring an extraordinary and unforgettable experience for weddings, corporate galas, and social gatherings at our prestigious venue.
+        </p></div>
+        </div>
+
+        <div class="w3-row">
+            <div class="w3-col w3-container" style="width:25%"><hr class="line"></div>
+            <div class="w3-col w3-container" style="width:30%"><p class="ball">More About this Venue</p></div>
+            <div class="w3-col w3-container" style="width:25%"></div>
+        </div>
+
+
+        <div class="w3-row">
+            <div class="w3-col w3-container" style="width:10%"></div>
+            <div class="w3-col w3-container" style="width:80%">
+                <p class="ball">Floor Plan Details</p>
+                <br>
+                <ul class="floor-plan-list">
+                    <li><strong>Venue Capacity:</strong> Up to <label id="up">900</label> guests</li>
+                    <li><strong>Layout Options:</strong> Customizable arrangements for weddings, corporate events, and private functions</li>
+                    <li><strong>Audiovisual Setup:</strong> mordern equipment for presentations and entertainment</li>
+                    <li><strong>Decor:</strong> Elegant and customizable decor to match your event theme</li>
+                    <li><strong>Event Coordination:</strong> Expert team to assist in planning and executing your event seamlessly</li>
+                </ul>
+            </div>
+            <div class="w3-col w3-container" style="width:10%"></div>
+        </div>
+
+    <div class="w3-row">
+        <div class="w3-col w3-container" style="width:25%"><hr class="line"></div>
+        <div class="w3-col w3-container" style="width:30%"><p class="ball">Testimonials</p></div>
+        <div class="w3-col w3-container" style="width:25%"></div>
+    </div>
+    <div class="testimonials w3-row">
+        <div class="w3-col w3-container" style="width: 50%">
+            <p class="testimonial-quote">"The Starlit Serenade Ballroom provided an enchanting setting for our wedding. The elegant floor plan and attentive staff made our special day truly unforgettable."</p>
+            <p class="testimonial-author">- Emily and James</p>
+        </div>
+        <div class="w3-col w3-container" style="width: 50%">
+            <p class="testimonial-quote">"Hosting our corporate event at the Starlit Serenade Ballroom was a resounding success. The versatile layout and impeccable arrangements by the team created an atmosphere of sophistication and professionalism."</p>
+            <p class="testimonial-author">- Elon Zuckerberg, CEO of SpaceBook</p>
+        </div>
+    </div>
+    <br>
+    <footer class="footer">
+        <script src="https://kit.fontawesome.com/cb997be55d.js" crossorigin="anonymous"></script>
+      <link href="../general/footer.css" rel="stylesheet">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>SAN MARIMO</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Careers @ San Marimo</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Company Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Other Links</h4>
+                    <ul>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Visitor Services & Amenities</a></li>
+                        <li><a href="#">Hotel & Flight Packages</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="info-col">
+                    <h4>Location</h4>
+                    <ul>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i> <br> +41 031 729 20 57</li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i> <br> sanmarimo@gmail.com</li>
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> <br> San Marimo, XXX, Switzerland</li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </footer>
+    </body>
+    
+    </html>

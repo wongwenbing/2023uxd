@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="BallRoom_Booking.css">
+  <title>Booking Page</title>
+</head>
+<body>
+  <div class="navbar">
+    <link href="../general/navbar.css" rel="css stylesheet">
+      <div class="header">
+          <a href="../index.html"><img src="../general_images/logoheader.png"></a>
+      </div>
+      <a href="../index.html">HOME</a>
+      <a href="../stay/stay.html">STAY</a>
+      <a href="../dining/dining.html">DINING</a>
+      <a href="../events/events.html">EVENTS</a>
+      <a href="../home/find_us.html">FIND US</a>
+      <div class="dropdown">
+        <a href="#" id="dropbtn">BOOK NOW   <i class="fa fa-caret-down"></i></a>
+        <div class="dropdown-content" style="top: 100%;"> 
+            <a href="../stay/book_rooms.html">BOOK ROOMS</a>
+            <a href="../dining/book_restaurant.html">BOOK RESTAURANT</a>
+        </div>
+        </div>
+      </div>
+          
+  <div class="w3-container">
+    <div class="row">
+      <div class="col">
+        <div class="w3-col w3-container" style="width: 20%;"></div>
+        <ul id="progress-bar" class="progressbar">
+          <li class="active">Confirmation</li>
+          <li>Personal Details</li>
+          <li>Payment</li>
+          <li>Completion</li>
+        </ul>
+        <div class="w3-col w3-container" style="width: 20%;"></div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="page-content">
+
+    <div class="page inside" id="page1">
+
+
+        <div class="w3-row">
+            <div class="w3-col w3-container" style="width:25%"><hr class="line"></div>
+            <div class="w3-col w3-container" style="width:30%"><p class="ball">Confirmation</p></div>
+            <div class="w3-col w3-container" style="width:25%"></div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col w3-container" style="width:15%"></div>
+            <div class="w3-col w3-container" style="width:85%"><p class="ball2">Ballroom Booked: <span id="name"></span></p></div>
+<br>
+    </div>
+    <div class="w3-row">
+        <div class="w3-col w3-container" style="width:15%"></div>
+        <div class="w3-col w3-container" style="width:85%"><p class="ball2">Ballroom Hourly Rate: <span id="price"></span></p></div>
+<br>
+</div>
+<div class="w3-row">
+    <div class="w3-col w3-container" style="width:15%"></div>
+    <div class="w3-col w3-container" style="width:85%"><p class="ball2">Drinks Per Person <span id="drink"></span></p></div>
+<br>
+</div>
+<div class="w3-row">
+    <div class="w3-col w3-container" style="width:15%"></div>
+    <div class="w3-col w3-container" style="width:85%"><p class="ball2">Up to: <span id="up"></span></p></div>
+<br>
+</div>
+<div class="w3-row">
+    <div class="w3-col w3-container" style="width:100%"><button class="button-35" onclick="back()">Switch Ballrooom</button></div>
+
+<br>
+</div>
+<br>
+</div>
+    <div class="page inside" id="page2">
+
+
+        <div class="w3-row">
+            <div class="w3-col w3-container" style="width:25%"><hr class="line"></div>
+            <div class="w3-col w3-container" style="width:30%"><p class="ball">Personal Details</p></div>
+            <div class="w3-col w3-container" style="width:25%"></div>
+        </div>
+        <div class="w3-row">
+			<div class="w3-col w3-container" style="width:1%"><p></p></div>
+            <div class="w3-col w3-container" style="width:48%">
+
+                <label class="ball2">First Name</label>
+                <input id="FirstNameInput" class="w3-input " placeholder="First Name" type="text">
+
+
+            </div>
+
+            <div class="w3-col w3-container" style="width:46%">
+
+                <label class="ball2">Last Name</label>
+                <input id="LastNameInput" class="w3-input " placeholder="Last Name" type="text">
+
+
+            </div>
+            
+    </div>
+    <div class="w3-row">
+        <div class="w3-col w3-container" style="width:1%"><p></p></div>
+        <div class="w3-col w3-container" style="width:96%">
+
+            <label class="ball2">Your Email</label>
+                <input id="EmailInput" class="w3-input " placeholder="Your Email" type="email">
+
+        </div>
+        
+</div>
+<div class="w3-row">
+    <div class="w3-col w3-container" style="width:1%"><p></p></div>
+    <div class="w3-col w3-container" style="width:96%">
+
+        <label class="ball2">Phone Number</label>
+            <input id="NumberInput" class="w3-input " placeholder="Phone Number" type="text">
+
+    </div>
+    
+</div>
+
+<div class="w3-row">
+    <div class="w3-col w3-container" style="width:25%"><hr class="line"></div>
+    <div class="w3-col w3-container" style="width:30%"><p class="ball">Booking Details</p></div>
+    <div class="w3-col w3-container" style="width:25%"></div>
+</div>
+<div class="w3-row">
+    <div class="w3-col w3-container" style="width:1%"><p></p></div>
+    <div class="w3-col w3-container" style="width:96%">
+
+        <label class="ball2">Date Of Booking</label>
+            <input class="w3-input " type="date" id="BookingInput" onchange="updateChanges()">
+
+    </div>
+    
+</div>
+<br>
+<div class="w3-row">
+    <div class="w3-col w3-container" style="width:1%"><p></p></div>
+    <div class="w3-col w3-container" style="width:96%">
+        <label class="ball2">Cruisine</label>
+        <select class="w3-select" name="option" id="CruisineInput" onchange="updateChange1()">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Italian Cuisine</option>
+            <option value="2">Chinese Cuisine</option>
+            <option value="3">Indian Cuisine</option>
+            <option value="4">Japanese Cuisine</option>
+            <option value="5">Mexican Cuisine</option>
+            <option value="6">French Cuisine</option>
+          </select>
+
+    </div>
+    
+</div>
+<br>
+<div class="w3-row">
+    <div class="w3-col w3-container" style="width:1%"><p></p></div>
+    <div class="w3-col w3-container" style="width:96%">
+
+        <label class="ball2">Any Specification</label>
+        <input class="w3-input" type="text" id="SpecInput" onchange="updateChange2()">
+
+
+    </div>
+    
+</div>
+<br>
+    </div>
+    
+
+    
+    <div class="page inside" id="page3">
+        <div class="w3-row">
+            <div class="w3-col w3-container" style="width:25%"><hr class="line"></div>
+            <div class="w3-col w3-container" style="width:30%"><p class="ball">Payment</p></div>
+            <div class="w3-col w3-container" style="width:25%"></div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col w3-container" style="width:1%"><p></p></div>
+            <div class="w3-col w3-container" style="width:96%">
+    
+                <label class="ball2">Credit Card Number</label>
+                    <input id="CardInput" class="w3-input " type="text" onKeyPress="if(this.value.length==20) return false;" />
+    
+            </div>
+            
+    </div>
+
+        <div class="w3-row">
+			<div class="w3-col w3-container" style="width:1%"><p></p></div>
+            <div class="w3-col w3-container" style="width:48%">
+
+                <label class="ball2">CVV</label>
+                <input id="CVVInput" type="text" class="w3-input"  onKeyPress="if(this.value.length==4) return false;" />
+
+
+            </div>
+            
+            <div class="w3-col w3-container" style="width:48%">
+
+                <label class="ball2">Expiry Date</label>
+                <input id="EXPInput" type="text" class="w3-input"  onKeyPress="if(this.value.length==5) return false;" />
+            </div>
+            <div class="w3-col w3-container" style="width:1%"><p></p></div>
+    </div>
+
+
+<br>
+    </div>
+    
+    <div class="page inside" id="page4">
+        <div class="w3-row">
+            <div class="w3-col w3-container" style="width:25%"><hr class="line"></div>
+            <div class="w3-col w3-container" style="width:30%"><p class="ball">Thank You!</p></div>
+            <div class="w3-col w3-container" style="width:25%"></div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col w3-container" style="width:1%"><p></p></div>
+            <div class="w3-col w3-container" style="width:96%"><p class="ball2">Your Booking is Done</p>
+            </div>
+            
+    </div>
+    <div class="w3-row">
+        <div class="w3-col w3-container" style="width:1%"><p></p></div>
+        <div class="w3-col w3-container" style="width:96%"><p class="ball2">Date of Booking <span id="date"></span></p>
+        </div>
+        
+</div>
+<div class="w3-row">
+    <div class="w3-col w3-container" style="width:1%"><p></p></div>
+    <div class="w3-col w3-container" style="width:96%"><p class="ball2">Your Cruisine: <span id="cru"></span></p>
+    </div>
+    
+</div>
+
+
+<div class="w3-row">
+    <div class="w3-col w3-container" style="width:1%"><p></p></div>
+    <div class="w3-col w3-container" style="width:96%"><p class="ball2">Specification: <span id="me"></span></p>
+    </div>
+    
+</div>
+<div class="w3-row">
+    <div class="w3-col w3-container" style="width:65%"><p></p></div>
+    <div class="w3-col w3-container" style="width:35%"><button class="button-35" onclick="main_home()">Back to Main Page</button>
+    </p>
+    </div>
+    
+</div>         
+    </div>
+    <div class="w3-row">
+      <div class="w3-col w3-container" style="width: 39%;"></div>
+      <div class="w3-col w3-container button-container">
+        <button id="Back" class="button-35">Back</button>
+        
+      </div>
+      <div class="w3-col w3-container" style="width: 2%;"></div> 
+      <div class="w3-col w3-container button-container">
+        
+        <button id="Next" class="button-35">Next</button>
+      </div>
+      <div class="w3-col w3-container" style="width: 39%;"></div>  
+    </div>
+  <br>
+  <footer class="footer">
+    <script src="https://kit.fontawesome.com/cb997be55d.js" crossorigin="anonymous"></script>
+  <link href="../general/footer.css" rel="stylesheet">
+    <div class="footer-container">
+        <div class="footer-row">
+            <div class="footer-col">
+                <h4>SAN MARIMO</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Careers @ San Marimo</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Company Information</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Other Links</h4>
+                <ul>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Visitor Services & Amenities</a></li>
+                    <li><a href="#">Hotel & Flight Packages</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <div class="info-col">
+                <h4>Location</h4>
+                <ul>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i> <br> +41 031 729 20 57</li>
+                    <li><i class="fa fa-envelope" aria-hidden="true"></i> <br> sanmarimo@gmail.com</li>
+                    <li><i class="fa fa-map-marker" aria-hidden="true"></i> <br> San Marimo, XXX, Switzerland</li>
+                </ul>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+  function ValidateEXP(Expiry){
+    const EXPRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
+    return EXPRegex.test(Expiry);
+  }
+  function ValidateCVV(CVV){
+      const CVVRegex = /^\d{3,4}$/;
+      return CVVRegex.test(CVV);
+  }
+  function ValidateCard(Card){
+    const cardRegex = /^4\d{3}(\s?\d{4}){3}$/;
+    return cardRegex.test(Card);
+  }
+  function ValidateName(name){
+    const nameRegex = /^[A-Za-z]+$/;
+    return nameRegex.test(name);
+  }
+  function validateEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+  }
+  // Function to validate mobile number format
+  function validateMobileNumber(mobileNumber) {
+      const mobileRegex = /^\d{8}$/;
+      return mobileRegex.test(mobileNumber);
+  }
+    var currentPage = 1;
+    var totalPages = 4;
+    const FirstNameInput = document.getElementById("FirstNameInput");
+    const LastNameInput = document.getElementById("LastNameInput");
+    const EmailInput = document.getElementById("EmailInput");
+    const NumberInput = document.getElementById("NumberInput");
+    const BookingInput = document.getElementById("BookingInput");
+    const CruisineInput = document.getElementById("CruisineInput");
+    const SpecInput = document.getElementById("SpecInput");
+    const CardInput = document.getElementById("CardInput");
+    const CVVInput = document.getElementById("CVVInput");
+    const EXPInput = document.getElementById("EXPInput");
+  
+    $("#Next").on('click', function () {
+      if (currentPage < totalPages) {
+        if(currentPage === 3){
+          if (CardInput.value === ""){
+            alert("Please enter your Credit Card Number.");
+          }
+          else if(!ValidateCard(CardInput.value)){
+            alert("Please enter your 16 digit credit card number with or without spaces.");
+          }
+          else if (CVVInput.value === ""){
+            alert("Please enter your Credit Card CVV.");
+          }
+          else if(!ValidateCVV(CVVInput.value)){
+            alert("Please enter your 3 or 4-digit CVV numbers");
+          }
+          else if (EXPInput.value === ""){
+            alert("Please enter your Credit Card expiry date.");
+          }
+          else if(!ValidateEXP(EXPInput.value)){
+            alert("Please enter your expiry date in mm/yy format");
+          }
+          else {
+            currentPage++;
+        showPage(currentPage);
+        updateButtonsVisibility();
+          }
+        }
+        if(currentPage === 2){
+          if (FirstNameInput.value === ""){
+            alert("Please enter your First Name.");
+          }
+          else if(!ValidateName(FirstNameInput.value)){
+            alert("Please enter your name using letters A-Z.");
+          }
+          else if (LastNameInput.value === ""){
+            alert("Please enter your last name.");
+          }
+          else if(!ValidateName(LastNameInput.value)){
+            alert("Please enter your name using letters A-Z.");
+          }
+          else if (EmailInput.value === ""){
+            alert("Please enter your email address.");
+          }
+          else if(!validateEmail(EmailInput.value)){
+            alert("Please enter your email address, for example john@example.com");
+          }
+          else if (NumberInput.value === ""){
+            alert("Please enter your phone number.");
+          }
+          else if(!validateMobileNumber(NumberInput.value)){
+            alert("Please enter your 8-digit phone number.");
+          }
+          else if (BookingInput.value === ""){
+            alert("Please select a date of booking.");
+          }
+          else if (CruisineInput.value === ""){
+            alert("Please select a cruisine type.");
+          }
+          else {
+            currentPage++;
+        showPage(currentPage);
+        updateButtonsVisibility();
+          }
+        }
+        if(currentPage === 1){
+          currentPage++;
+        showPage(currentPage);
+        updateButtonsVisibility();
+        }
+      }
+    })
+  
+    $("#Back").on('click', function () {
+      if (currentPage > 1) {
+        currentPage--;
+        showPage(currentPage);
+        updateButtonsVisibility();
+      }
+    })
+  
+    $("#Reset").on('click', function () {
+      currentPage = 1;
+      showPage(currentPage);
+      updateButtonsVisibility();
+    })
+  
+    function showPage(pageNumber) {
+      $(".page").hide();
+      $("#page" + pageNumber).show();
+      updateProgressBar(pageNumber);
+    }
+  
+    function updateProgressBar(currentPage) {
+      $(".progressbar li").removeClass("active");
+      $(".progressbar li:nth-child(" + currentPage + ")").addClass("active");
+    }
+  
+    showPage(currentPage);
+  
+    function updateButtonsVisibility() {
+      if (currentPage === 1) {
+        document.getElementById("Back").style.display = "none";
+        document.getElementById("Next").style.display ="inline-block"; // Show the "Next" button on the first page (Page 1)
+      } else if (currentPage === totalPages) {
+        $("#Next").hide();
+        document.getElementById("Back").style.display = "none"; // Hide the "Back" button on the last page (Page 4)
+      } else {
+        document.getElementById("Back").style.display ="inline-block";
+        document.getElementById("Next").style.display ="inline-block";
+      }
+    }
+  
+    function back() {
+      localStorage.removeItem("name");
+      localStorage.removeItem("price");
+      localStorage.removeItem("drink");
+      localStorage.removeItem("up");
+      window.location.href = 'Main_page.html';
+    }
+  
+    window.addEventListener('DOMContentLoaded', function () {
+      var namez = document.getElementById('name');
+      var name = localStorage.getItem("name");
+      namez.textContent = name;
+  
+      var pricez = document.getElementById('price');
+      var price = localStorage.getItem("price");
+      pricez.textContent = price;
+  
+      var drinkz = document.getElementById('drink');
+      var drink = localStorage.getItem("drink");
+      drinkz.textContent = drink;
+  
+      var upz = document.getElementById('up');
+      var up = localStorage.getItem("up");
+      upz.textContent = up;
+    });
+  
+    function updateChanges() {
+      document.getElementById('date').innerText = document.getElementById("BookingInput").value;
+    }
+  
+    function updateChange1() {
+      const selectedValue = document.getElementById("CruisineInput").value;
+      let selectedCuisine = '';
+  
+      if (selectedValue === '1') {
+        selectedCuisine = 'Italian Cuisine';
+      } else if (selectedValue === '2') {
+        selectedCuisine = 'Chinese Cuisine';
+      } else if (selectedValue === '3') {
+        selectedCuisine = 'Indian Cuisine';
+      } else if (selectedValue === '4') {
+        selectedCuisine = 'Japanese Cuisine';
+      } else if (selectedValue === '5') {
+        selectedCuisine = 'Mexican Cuisine';
+      } else if (selectedValue === '6') {
+        selectedCuisine = 'French Cuisine';
+      }
+  
+      document.getElementById('cru').innerText = selectedCuisine;
+    }
+  
+    function updateChange2() {
+      const spec = document.getElementById("SpecInput").value;
+      const meElement = document.getElementById('me');
+  
+      if (spec === "") {
+        meElement.innerText = "No Specification";
+      } else {
+        meElement.innerText = spec;
+      }
+    }
+  
+    function back() {
+      window.location.href = 'events.html';
+    }
+    function main_home() {
+        window.location.href = '../index.html';
+      }
+    updateButtonsVisibility();
+  </script>
+  
+</body>
+</html>
