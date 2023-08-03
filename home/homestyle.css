@@ -625,16 +625,16 @@ main > article > .article-nav-section{
 }
 
 main > article:first-child > .article-image-section{
-    background-image: url("home_images/juniorsuite.jpg");
+    background-image: url("../home_images/juniorsuite.jpg");
 }
 main > article:nth-child(2) > .article-image-section{
-    background-image: url("home_images/deluxesuite.jpg");
+    background-image: url("../home_images/deluxesuite.jpg");
 }
 main > article:nth-child(3) > .article-image-section{
-    background-image: url("home_images/villa.jpg");
+    background-image: url("../home_images/villa.jpg");
 }
 main > article:nth-child(4) > .article-image-section{
-    background-image: url("home_images/presidential.jpg");
+    background-image: url("../home_images/presidential.jpg");
 }
   
 main > article > .article-image-section{
